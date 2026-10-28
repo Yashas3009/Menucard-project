@@ -7,7 +7,7 @@ int main()
     int ch;
     int sub_total;
     int grand_total;
-    int espress0_qty=0,croissant_qty=0,aflredo_pasta_qty=0,muffin_qty=0,pizza_qty=0;
+    int espresso_qty=0,croissant_qty=0,aflredo_pasta_qty=0,muffin_qty=0,pizza_qty=0;
     float gst;
     int Payment;
     label:
@@ -20,44 +20,41 @@ int main()
     printf("6. CHECKOUT AND EXIT\n");
 
     do
-    {   
-        menu_loop:
-
+    { 
         printf("ENTER YOUR CHOICE: \n");
         scanf("%d",&ch);
-
-
+        
     switch(ch)
     {
 
         case 1: 
-                printf("You Ordered ESPRESSO\n");
+                espresso_qty++;
+                printf("You Ordered ESPRESSO %d\n",espresso_qty);
                 sub_total = sub_total + 100;
-                espress0_qty++;
                 break;
           
         case 2: 
-                printf("You Ordered CROISSANT\n");
-                sub_total = sub_total + 150;
                 croissant_qty++;
+                printf("You Ordered CROISSANT %d\n",croissant_qty);
+                sub_total = sub_total + 150;
                 break;
 
         case 3: 
-                printf("You Ordered ALFREDO_PASTA\n");
+                aflredo_pasta_qty++;
+                printf("You Ordered ALFREDO_PASTA %d\n",aflredo_pasta_qty);
                 sub_total = sub_total + 200;
-                aflredo_pasta_qty;
                 break;
 
         case 4: 
-                printf("You Ordered MUFFIN\n");
-                sub_total = sub_total + 250;
-                muffin_qty;       
+                muffin_qty++;
+                printf("You Ordered MUFFIN %d\n",muffin_qty);
+                sub_total = sub_total + 250;       
                 break;
 
         case 5: 
-                printf("You Ordered PIZZA\n");
+                pizza_qty++;
+                printf("You Ordered PIZZA %d\n",pizza_qty);
                 sub_total = sub_total + 300;
-                pizza_qty;
                 break;
         
         case 6:
@@ -70,7 +67,7 @@ int main()
     }
     
     }
-while(ch != 5);
+while(ch != 6);
     printf(".........You have Ordered......\n");
     if(espress0_qty > 0)
         printf("ESPRESSO: %d\n", espress0_qty);
